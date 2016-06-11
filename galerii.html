@@ -1,0 +1,15 @@
+<div class="body2">
+		
+		<?php if (!empty($galleryquery)) :?>
+			
+			 <?php foreach ($galleryquery as $gallery) :?>
+				<a href="?page=showpicture&id=<?php echo $gallery['id']; ?>"><div class="floating_project">
+					<span class="projecttitle"><?php echo $gallery['picturetitle']; ?></span>
+					<img src="Pildid/<?php echo $gallery['picture'] ?>" alt="Image_<?php echo $gallery['id'] ?>">
+				</div></a>
+			<?php endforeach; ?>
+		<?php else: ?>
+		<p>Pildid puuduvad.</p>
+		<?php endif; ?>
+	</div>
+
